@@ -1,15 +1,47 @@
-// Update this page (the content is just a fallback if you fail and example)
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Index = () => {
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
-      {/* Update with components here - default to put new layout sections as separate components in the components folder, and import them here */}
-      <div>
-        <h1 className="text-3xl text-center">Your Blank Canvas</h1>
-        <p className="text-center">
-          Chat with the agent to start making edits.
-        </p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-500 flex flex-col items-center justify-center p-4">
+      <header className="text-center mb-8">
+        <h1 className="text-5xl font-bold text-white mb-4">Welcome to Learnify</h1>
+        <p className="text-xl text-white">Your journey to knowledge starts here!</p>
+      </header>
+      <main className="w-full max-w-4xl">
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl">Why Choose Learnify?</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Interactive Courses</li>
+              <li>Expert Instructors</li>
+              <li>Flexible Learning</li>
+              <li>Community Support</li>
+            </ul>
+          </CardContent>
+        </Card>
+        <Separator className="my-8" />
+        <div className="text-center">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button variant="primary" className="text-lg">Get Started</Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Click to begin your learning journey!</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
+      </main>
+      <footer className="mt-8 text-white">
+        <p>&copy; 2023 Learnify. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

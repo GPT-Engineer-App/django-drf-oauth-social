@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -30,7 +31,9 @@ const Index = () => {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
-                <Button variant="primary" className="text-lg">Get Started</Button>
+                <Link to="/intro">
+                  <Button variant="primary" className="text-lg">Get Started</Button>
+                </Link>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Click to begin your learning journey!</p>
